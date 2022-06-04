@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Blocking
+  - Bullet
+  - Enemy
+  - Boss
+  - ShooterEnemy
+  - BulletBarrier
+  - EnemyBullet
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - PostProcessing
+  - Water
+  - UI
+  - Blocking
+  - Enemy
+  - Level
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Level
+    uniqueID: 3461751481
+    locked: 0
+  - name: Bullet
+    uniqueID: 2982709955
+    locked: 0
+  - name: Enemy
+    uniqueID: 3373876837
+    locked: 0
+  - name: Player
+    uniqueID: 1864566057
+    locked: 0
+  - name: UI
+    uniqueID: 2715080993
+    locked: 0

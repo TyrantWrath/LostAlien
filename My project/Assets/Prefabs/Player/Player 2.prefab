@@ -569,6 +569,8 @@ GameObject:
   - component: {fileID: 6495408748555195452}
   - component: {fileID: 6495408748555195455}
   - component: {fileID: 6495408748555195454}
+  - component: {fileID: 1727021647}
+  - component: {fileID: 1727021648}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Player
@@ -752,10 +754,10 @@ MonoBehaviour:
   - {fileID: 7564296641595145692, guid: 5e58d527a39ac4a4bb3c3ae670ed858d, type: 3}
   - {fileID: 653321050427482519, guid: 5853b49cc1d0e0942889ac293a3c37fb, type: 3}
   - {fileID: 4432208874368132013, guid: 409ff3d944e21724dbb279dc8c249439, type: 3}
-  pistolCameraShake: 0.3
+  blasterCameraShake: 0.3
   laserCameraShake: 0.6
   matterCameraShake: 0.9
-  flameCameraShake: 1.2
+  plasmaCameraShake: 0.5
   shakeDuration: 0.2
 --- !u!114 &6495408748555195455
 MonoBehaviour:
@@ -785,6 +787,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 0
+  _slider: {fileID: 0}
+--- !u!114 &1727021647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6495408748555195431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4224856b000f3f84fbf2d4bcfaac5c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalVolume: {fileID: 0}
+--- !u!114 &1727021648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6495408748555195431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f91061762af806b40b25b8d7a0e3ce14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerWeaponUI: {fileID: 0}
 --- !u!1 &6495408748575372397
 GameObject:
   m_ObjectHideFlags: 0
@@ -2301,7 +2330,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.75
+  m_Radius: 1.91
 --- !u!1 &6495408749393755332
 GameObject:
   m_ObjectHideFlags: 0

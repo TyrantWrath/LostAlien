@@ -17,7 +17,7 @@ public class PlayerWeaponUI : MonoBehaviour
     {
         for (int i = 0; i < playerWeaponSO.Length; i++)
         {
-            playerWeaponSO[i].weaponDurability = 50;
+            playerWeaponSO[i].weaponDurability = playerWeaponSO[i].weaponMaxDurabilty;
         }
     }
     void Start()

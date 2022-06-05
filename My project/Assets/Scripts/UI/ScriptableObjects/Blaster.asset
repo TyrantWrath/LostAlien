@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Blaster
   weaponDamage: 10
-  weaponMaxDurabilty: Indistructable
+  weaponMaxDurabilty: 100
   weaponDurability: 100
   weaponSprite: {fileID: 21300000, guid: a04c0c81ee9a20f41a94ec0d0e5aa090, type: 3}

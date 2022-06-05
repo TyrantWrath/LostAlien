@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Laser
   weaponDamage: 20
-  weaponMaxDurabilty: 50
-  weaponDurability: 50
+  weaponMaxDurabilty: 5
+  weaponDurability: 0
   weaponSprite: {fileID: 21300000, guid: c15db7892aab10a429f5899b100eecaf, type: 3}

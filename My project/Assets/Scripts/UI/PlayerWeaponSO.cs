@@ -7,7 +7,8 @@ public class PlayerWeaponSO : ScriptableObject
 {
     public string weaponName;
     public string weaponDamage;
-    public string weaponMaxDurabilty;
+    public int weaponMaxDurabilty;
+    public float weaponBulletSpeed;
     public float weaponDurability;
     public Sprite weaponSprite;
 }

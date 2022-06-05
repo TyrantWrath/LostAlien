@@ -47,6 +47,7 @@ public class PlayerWeaponManager : MonoBehaviour
 
     public void ActivateGun(int gunIndex)
     {
+        ResetWeaponIndex();
         playerWeapons[weaponIndex].ActivateGun(gunIndex);
     }
     void ChangeWeapon()
@@ -55,22 +56,42 @@ public class PlayerWeaponManager : MonoBehaviour
         {
             return;
         }
+        else if (_playerWeaponUI.playerWeaponSO[1].weaponDurability <= 0 &&
+        _playerWeaponUI.playerWeaponSO[2].weaponDurability <= 0 &&
+        _playerWeaponUI.playerWeaponSO[3].weaponDurability <= 0)
+        {
+            if (weaponIndex != 0)
+            {
+                SwitchToNextWeapon();
+            }
+            return;
+        }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (_playerWeaponUI.playerWeaponSO[weaponIndex].weaponDurability <= 0)
             {
-                playerWeapons[weaponIndex].gameObject.SetActive(false);
-
-                weaponIndex++;
-                if (weaponIndex == playerWeapons.Length)
-                {
-                    weaponIndex = 0;
-                }
-
-                playerWeapons[weaponIndex].gameObject.SetActive(true);
+                SwitchToNextWeapon();
+            }
+            else if (Input.GetKeyDown(KeyCode.Q))
+            {
+                SwitchToNextWeapon();
             }
         }
+    }
+    private void SwitchToNextWeapon()
+    {
+        playerWeapons[weaponIndex].gameObject.SetActive(false);
+        weaponIndex++;
 
+        ResetWeaponIndex();
+        playerWeapons[weaponIndex].gameObject.SetActive(true);
+    }
+    private void ResetWeaponIndex()
+    {
+        if (weaponIndex == playerWeapons.Length)
+        {
+            weaponIndex = 0;
+        }
     }
     public void Shoot(Vector3 spawnPos)
     {

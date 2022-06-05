@@ -336,6 +336,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.6
-  damageAmount: 25
+  damageAmount: 15
   deactivateTimer: 3
   destroyObj: 0

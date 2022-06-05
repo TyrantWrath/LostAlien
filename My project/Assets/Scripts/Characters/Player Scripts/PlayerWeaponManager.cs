@@ -10,33 +10,39 @@ public class PlayerWeaponManager : MonoBehaviour
 
     [Header("WeaponBulletList")]
     [SerializeField] GameObject[] weaponBullets;
-    [SerializeField] float pistolCameraShake;
+
+    [SerializeField] float blasterCameraShake;
     [SerializeField] float laserCameraShake;
     [SerializeField] float matterCameraShake;
-    [SerializeField] float flameCameraShake;
+    [SerializeField] float plasmaCameraShake;
 
     private Vector2 targetPos;
     private Vector2 direction;
     private Camera mainCam;
     private Vector2 bulletSpawnPosition;
     private Quaternion bulletRotation;
+
     private CameraShake _cameraShake;
     private CharacterHealth playerHealth;
+    private PlayerWeaponDurabilityManager _playerWeaponDurabilityManager;
+    private PlayerWeaponUI _playerWeaponUI;
 
     [SerializeField] private float shakeDuration = 0.2f;
     private void Awake()
     {
         weaponIndex = 0;
         playerWeapons[weaponIndex].gameObject.SetActive(true);
-
         mainCam = Camera.main;
         _cameraShake = mainCam.GetComponentInParent<CameraShake>();
         playerHealth = GetComponent<CharacterHealth>();
+        _playerWeaponDurabilityManager = GetComponent<PlayerWeaponDurabilityManager>();
+        _playerWeaponUI = GameObject.FindObjectOfType<Canvas>().GetComponent<PlayerWeaponUI>();
     }
 
     private void Update()
     {
         ChangeWeapon();
+        _playerWeaponUI.UpdateWeaponUI(weaponIndex);
     }
 
     public void ActivateGun(int gunIndex)
@@ -77,19 +83,26 @@ public class PlayerWeaponManager : MonoBehaviour
 
         if (weaponIndex == 0)
         {
-            _cameraShake.ShakeCamera(pistolCameraShake, shakeDuration);
+            _cameraShake.ShakeCamera(blasterCameraShake, shakeDuration);
+            _playerWeaponDurabilityManager.BlasterShotCounter();
         }
         else if (weaponIndex == 1)
         {
-            _cameraShake.ShakeCamera(laserCameraShake, shakeDuration);
+            _cameraShake.ShakeCamera(matterCameraShake, shakeDuration);
+
+            _playerWeaponDurabilityManager.AntiMatterShotCounter(1);
         }
         else if (weaponIndex == 2)
         {
-            _cameraShake.ShakeCamera(matterCameraShake, shakeDuration);
+            _cameraShake.ShakeCamera(laserCameraShake, shakeDuration);
+
+            _playerWeaponDurabilityManager.LaserShotCounter(1);
         }
         else if (weaponIndex == 3)
         {
-            _cameraShake.ShakeCamera(flameCameraShake, shakeDuration);
+            _cameraShake.ShakeCamera(plasmaCameraShake, shakeDuration);
+
+            _playerWeaponDurabilityManager.PlasmaShotCounter(1);
         }
 
         //GameObject newBullet = Instantiate(weaponBullets[weaponIndex], spawnPos, bulletRotation);

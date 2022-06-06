@@ -1162,7 +1162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 290548888}
   m_Layer: 0
-  m_Name: Doors
+  m_Name: Gates
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3407,6 +3407,7 @@ GameObject:
   - component: {fileID: 1155483728}
   - component: {fileID: 1155483730}
   - component: {fileID: 1155483729}
+  - component: {fileID: 1155483731}
   m_Layer: 5
   m_Name: Weapon
   m_TagString: Untagged
@@ -3433,7 +3434,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -403, y: 0}
+  m_AnchoredPosition: {x: -633, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1155483729
@@ -3474,6 +3475,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155483727}
   m_CullTransparentMesh: 1
+--- !u!95 &1155483731
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155483727}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3cf6d3cf2c9e0e84da95a2d9498c2e98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1192701833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3867,7 +3887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4278,7 +4298,7 @@ GameObject:
   - component: {fileID: 1443338455}
   - component: {fileID: 1443338457}
   m_Layer: 6
-  m_Name: Door2
+  m_Name: Gate2
   m_TagString: Blocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4851,7 +4871,7 @@ GameObject:
   - component: {fileID: 1599710295}
   - component: {fileID: 1599710294}
   m_Layer: 6
-  m_Name: Door4
+  m_Name: Gate4
   m_TagString: Blocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5303,7 +5323,7 @@ GameObject:
   - component: {fileID: 1726223134}
   - component: {fileID: 1726223133}
   m_Layer: 6
-  m_Name: Door3
+  m_Name: Gate3
   m_TagString: Blocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6640,7 +6660,7 @@ GameObject:
   - component: {fileID: 2064014347}
   - component: {fileID: 2064014346}
   m_Layer: 6
-  m_Name: Boss
+  m_Name: BossGate
   m_TagString: Blocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

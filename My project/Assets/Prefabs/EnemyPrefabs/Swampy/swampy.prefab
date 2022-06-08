@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 1169170338079189486}
   - component: {fileID: 7223292276498786955}
   - component: {fileID: 5390506417449115637}
+  - component: {fileID: 4423584424070725507}
   m_Layer: 7
   m_Name: swampy
   m_TagString: Enemy
@@ -187,10 +188,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -921090459
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ac80db7c3d5ff19489b04948ae7cea6b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.4669811, b: 0.4669811, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -258,9 +259,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0013556617, y: -0.011298791}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.06903209
 --- !u!50 &983543972166521845
 Rigidbody2D:
   serializedVersion: 4
@@ -300,6 +301,9 @@ MonoBehaviour:
   damageCoolDownThreshold: 1
   damageAmount: 10
   chaseSpeed: 1.2
+  enemyShakeIntensity: 0.4
+  enemyShakeDuration: 0.2
+  knockBackEffect: {x: 2, y: 2}
   turningDelayRate: 0
 --- !u!114 &7223292276498786955
 MonoBehaviour:
@@ -327,3 +331,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   health: 0
+  _slider: {fileID: 0}
+  _heartAnimator: {fileID: 0}
+--- !u!114 &4423584424070725507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983543972166521844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000b92256ce1b4fa4fbc38ac8b1654619c99536f83a2905236f21d9d4a1
+  m_ShapePath:
+  - {x: -0.06269678, y: -0.06970978, z: 0}
+  - {x: -0.028755857, y: 0.03883934, z: 0}
+  - {x: 0.03607644, y: 0.03815365, z: 0}
+  - {x: 0.06469328, y: -0.07108188, z: 0}
+  m_ShapePathHash: -697663178
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -24872

@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: -4349767947913565639}
   - component: {fileID: -1990003295200309701}
   - component: {fileID: 528466898756944564}
+  - component: {fileID: 851530726}
   m_Layer: 7
   m_Name: imp
   m_TagString: Enemy
@@ -187,7 +188,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -921090459
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a5400f9697d2ba741b1f9fb4996a9ca3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -300,6 +301,9 @@ MonoBehaviour:
   damageCoolDownThreshold: 1
   damageAmount: 10
   chaseSpeed: 0.8
+  enemyShakeIntensity: 0.4
+  enemyShakeDuration: 0.2
+  knockBackEffect: {x: 2, y: 2}
   turningDelayRate: 0
 --- !u!114 &-1990003295200309701
 MonoBehaviour:
@@ -327,3 +331,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   health: 0
+  _slider: {fileID: 0}
+  _heartAnimator: {fileID: 0}
+--- !u!114 &851530726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5561648067804747846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000b92256ce1b4fa4fbc38ac8b1654619c99536f83a2905236f21d9d4a1
+  m_ShapePath:
+  - {x: -0.029855967, y: -0.049687624, z: 0}
+  - {x: -0.030434847, y: -0.00028705597, z: 0}
+  - {x: 0.0406, y: 0.00053215027, z: 0}
+  - {x: 0.0406, y: -0.049277782, z: 0}
+  m_ShapePathHash: -1670917963
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -37840

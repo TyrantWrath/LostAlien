@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: -3039658942138616642}
   - component: {fileID: -8305124595322836743}
   - component: {fileID: 7048102194441055411}
+  - component: {fileID: 3404720130356615289}
   m_Layer: 7
   m_Name: masked_orc
   m_TagString: Enemy
@@ -187,7 +188,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -921090459
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 10d19740c6a8fc1419003750ca38c144, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -300,6 +301,9 @@ MonoBehaviour:
   damageCoolDownThreshold: 1
   damageAmount: 10
   chaseSpeed: 1
+  enemyShakeIntensity: 0.4
+  enemyShakeDuration: 0.2
+  knockBackEffect: {x: 2, y: 2}
   turningDelayRate: 0
 --- !u!114 &-8305124595322836743
 MonoBehaviour:
@@ -327,3 +331,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   health: 0
+  _slider: {fileID: 0}
+  _heartAnimator: {fileID: 0}
+--- !u!114 &3404720130356615289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7548381689779406339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000b92256ce1b4fa4fbc38ac8b1654619c99536f83a2905236f21d9d4a1
+  m_ShapePath:
+  - {x: -0.028340697, y: -0.07, z: 0}
+  - {x: -0.028340816, y: 0.045691513, z: 0}
+  - {x: 0.0508, y: 0.045691513, z: 0}
+  - {x: 0.0508, y: -0.07, z: 0}
+  m_ShapePathHash: 668657459
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -29410

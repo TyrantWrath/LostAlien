@@ -17,7 +17,7 @@ public class PlayerWeaponUI : MonoBehaviour
     {
         for (int i = 0; i < playerWeaponSO.Length; i++)
         {
-            playerWeaponSO[i].weaponDurability = playerWeaponSO[i].weaponMaxDurabilty;
+            playerWeaponSO[i].WeaponDurability = playerWeaponSO[i].WeaponStartingDurability;
         }
     }
     void Start()
@@ -37,38 +37,40 @@ public class PlayerWeaponUI : MonoBehaviour
     // Update is called once per frame
     public void UpdateWeaponUI(int weaponIndex = 0)
     {
-        //Debug.Log(_currentWeaponInUse);
-        if (weaponIndex == 0)
+        switch (weaponIndex)
         {
-            _weaponImage.sprite = playerWeaponSO[0].weaponSprite;
-            _weaponNameText.text = playerWeaponSO[0].weaponName;
-            _weaponDamageText.text = playerWeaponSO[0].weaponDamage;
-            _weaponDurabilitySlider.value = playerWeaponSO[0].weaponDurability;
+            case 0:
+                _weaponImage.sprite = playerWeaponSO[0].WeaponSprite;
+                _weaponNameText.text = playerWeaponSO[0].WeaponName;
+                _weaponDamageText.text = playerWeaponSO[0].WeaponDamage;
+                _weaponDurabilitySlider.value = playerWeaponSO[0].WeaponDurability;
+                break;
+
+
+            case 1:
+                _weaponImage.sprite = playerWeaponSO[1].WeaponSprite;
+                _weaponNameText.text = playerWeaponSO[1].WeaponName;
+                _weaponDamageText.text = playerWeaponSO[1].WeaponDamage;
+                _weaponDurabilitySlider.value = playerWeaponSO[1].WeaponDurability;
+                break;
+
+
+            case 2:
+                _weaponImage.sprite = playerWeaponSO[2].WeaponSprite;
+                _weaponNameText.text = playerWeaponSO[2].WeaponName;
+                _weaponDamageText.text = playerWeaponSO[2].WeaponDamage;
+                _weaponDurabilitySlider.value = playerWeaponSO[2].WeaponDurability;
+                break;
+
+
+            case 3:
+                _weaponImage.sprite = playerWeaponSO[3].WeaponSprite;
+                _weaponNameText.text = playerWeaponSO[3].WeaponName;
+                _weaponDamageText.text = playerWeaponSO[3].WeaponDamage;
+                _weaponDurabilitySlider.value = playerWeaponSO[3].WeaponDurability;
+                break;
 
         }
-        else if (weaponIndex == 1)
-        {
-            _weaponImage.sprite = playerWeaponSO[1].weaponSprite;
-            _weaponNameText.text = playerWeaponSO[1].weaponName;
-            _weaponDamageText.text = playerWeaponSO[1].weaponDamage;
-            _weaponDurabilitySlider.value = playerWeaponSO[1].weaponDurability;
 
-        }
-        else if (weaponIndex == 2)
-        {
-            _weaponImage.sprite = playerWeaponSO[2].weaponSprite;
-            _weaponNameText.text = playerWeaponSO[2].weaponName;
-            _weaponDamageText.text = playerWeaponSO[2].weaponDamage;
-            _weaponDurabilitySlider.value = playerWeaponSO[2].weaponDurability;
-
-        }
-        else if (weaponIndex == 3)
-        {
-            _weaponImage.sprite = playerWeaponSO[3].weaponSprite;
-            _weaponNameText.text = playerWeaponSO[3].weaponName;
-            _weaponDamageText.text = playerWeaponSO[3].weaponDamage;
-            _weaponDurabilitySlider.value = playerWeaponSO[3].weaponDurability;
-
-        }
     }
 }

@@ -10,6 +10,7 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField] private Slider _slider;
 
     private Animator _animator;
+    [SerializeField] Animator _heartAnimator;
 
     void Awake()
     {
@@ -20,22 +21,41 @@ public class CharacterHealth : MonoBehaviour
     {
         health = maxHealth;
     }
+
+    public void HealthTOADD(float healtHmount)
+    {
+
+        health += healtHmount;
+        if (_heartAnimator != null)
+        {
+            _heartAnimator.SetTrigger(TagManager.PLAYER_UI_GOT_DAMAGED_PARAMETER);
+        }
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+        SliderUI();
+    }
     public void TakeDamage(float damageAmount)
     {
         health -= damageAmount;
+        if (_heartAnimator != null)
+        {
+            _heartAnimator.SetTrigger(TagManager.PLAYER_UI_GOT_DAMAGED_PARAMETER);
+        }
         if (health <= 0f)
         {
             _animator.SetTrigger(TagManager.DEATH_ANIMATION_PARAMETER);
         }
         if (_slider != null)
         {
-            SliderUI(health);
+            SliderUI();
         }
 
     }
-    private void SliderUI(float sliderValue)
+    private void SliderUI()
     {
-        _slider.value = sliderValue;
+        _slider.value = health;
     }
 
 

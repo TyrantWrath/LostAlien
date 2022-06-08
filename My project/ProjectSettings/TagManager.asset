@@ -21,7 +21,7 @@ TagManager:
   - Blocking
   - Enemy
   - Level
-  - 
+  - walls
   - 
   - 
   - 
@@ -51,11 +51,17 @@ TagManager:
   - name: Level
     uniqueID: 3461751481
     locked: 0
+  - name: walls
+    uniqueID: 4221849371
+    locked: 0
   - name: Bullet
     uniqueID: 2982709955
     locked: 0
   - name: Enemy
     uniqueID: 3373876837
+    locked: 0
+  - name: Intractables
+    uniqueID: 989345429
     locked: 0
   - name: Player
     uniqueID: 1864566057

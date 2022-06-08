@@ -9,12 +9,14 @@ public class PlayerShootingManager : MonoBehaviour
 
     [SerializeField] Transform bulletSpawnPos;
     private Animator shootingAnimation;
+    private CharacterHealth _characterHealth;
 
     private PlayerWeaponManager playerWeaponManager;
     private void Awake()
     {
         playerWeaponManager = GetComponent<PlayerWeaponManager>();
         shootingAnimation = bulletSpawnPos.GetComponent<Animator>();
+        _characterHealth = GetComponent<CharacterHealth>();
     }
 
     private void Update()
@@ -24,16 +26,24 @@ public class PlayerShootingManager : MonoBehaviour
 
     private void HandleShooting()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!_characterHealth.IsAlive())
         {
-            if (Time.time > shootingTimer)
+            return;
+        }
+        else
+        {
+            if (Input.GetMouseButtonDown(0))
             {
-                shootingTimer = Time.time + shootingTimerLimit;
-                shootingAnimation.SetTrigger(TagManager.SHOOT_ANIMATION_PARAMETER);
+                if (Time.time > shootingTimer)
+                {
+                    shootingTimer = Time.time + shootingTimerLimit;
+                    shootingAnimation.SetTrigger(TagManager.SHOOT_ANIMATION_PARAMETER);
 
-                CreateBullet();
+                    CreateBullet();
+                }
             }
         }
+
     }
 
     void CreateBullet()

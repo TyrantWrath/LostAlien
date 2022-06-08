@@ -56,9 +56,9 @@ public class PlayerWeaponManager : MonoBehaviour
         {
             return;
         }
-        else if (_playerWeaponUI.playerWeaponSO[1].weaponDurability <= 0 &&
-        _playerWeaponUI.playerWeaponSO[2].weaponDurability <= 0 &&
-        _playerWeaponUI.playerWeaponSO[3].weaponDurability <= 0)
+        else if (_playerWeaponUI.playerWeaponSO[1].WeaponDurability <= 0 &&
+        _playerWeaponUI.playerWeaponSO[2].WeaponDurability <= 0 &&
+        _playerWeaponUI.playerWeaponSO[3].WeaponDurability <= 0)
         {
             if (weaponIndex != 0)
             {
@@ -68,7 +68,7 @@ public class PlayerWeaponManager : MonoBehaviour
         }
         else
         {
-            if (_playerWeaponUI.playerWeaponSO[weaponIndex].weaponDurability <= 0)
+            if (_playerWeaponUI.playerWeaponSO[weaponIndex].WeaponDurability <= 0)
             {
                 SwitchToNextWeapon();
             }
@@ -101,29 +101,30 @@ public class PlayerWeaponManager : MonoBehaviour
 
         bulletRotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
         BulletPool.instance.FireBullet(weaponIndex, spawnPos, bulletRotation, direction);
-
-        if (weaponIndex == 0)
+        switch (weaponIndex)
         {
-            _cameraShake.ShakeCamera(blasterCameraShake, shakeDuration);
-            _playerWeaponDurabilityManager.BlasterShotCounter();
-        }
-        else if (weaponIndex == 1)
-        {
-            _cameraShake.ShakeCamera(matterCameraShake, shakeDuration);
 
-            _playerWeaponDurabilityManager.AntiMatterShotCounter(1);
-        }
-        else if (weaponIndex == 2)
-        {
-            _cameraShake.ShakeCamera(laserCameraShake, shakeDuration);
+            case 0:
+                _cameraShake.ShakeCamera(blasterCameraShake, shakeDuration);
+                _playerWeaponDurabilityManager.BlasterShotCounter();
+                break;
 
-            _playerWeaponDurabilityManager.LaserShotCounter(1);
-        }
-        else if (weaponIndex == 3)
-        {
-            _cameraShake.ShakeCamera(plasmaCameraShake, shakeDuration);
+            case 1:
+                _cameraShake.ShakeCamera(matterCameraShake, shakeDuration);
+                _playerWeaponDurabilityManager.AntiMatterShotCounter(1);
+                break;
 
-            _playerWeaponDurabilityManager.PlasmaShotCounter(1);
+
+            case 2:
+                _cameraShake.ShakeCamera(laserCameraShake, shakeDuration);
+                _playerWeaponDurabilityManager.LaserShotCounter(1);
+                break;
+
+
+            case 3:
+                _cameraShake.ShakeCamera(plasmaCameraShake, shakeDuration);
+                _playerWeaponDurabilityManager.PlasmaShotCounter(1);
+                break;
         }
 
         //GameObject newBullet = Instantiate(weaponBullets[weaponIndex], spawnPos, bulletRotation);

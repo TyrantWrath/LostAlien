@@ -114,6 +114,7 @@ public class Bullet : MonoBehaviour
             CancelInvoke("DeactivateBullet");
             _animator.enabled = true;
             _animator.SetBool(TagManager.EXPLODE_ANIMATION_PARAMETER, true);
+            col.GetComponent<Animator>().SetTrigger(TagManager.BULLET_EXIT_TIGGER_PARAMETER);
         }
     }
 

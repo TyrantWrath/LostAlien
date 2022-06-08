@@ -15,8 +15,9 @@ public class playerMovement : CharacterMovement
     private Rigidbody2D _rigidBody2D;
 
     private PlayerWeaponManager _playerWeaponManager;
+    private PlayerWeaponDurabilityManager _playerWeaponDurabilityManager;
     private CharacterHealth playerHealth;
-    private Collider2D[] _myColliders;
+    private CircleCollider2D _circleCollider2D;
 
     private CameraFadeOutScript _cameraFadeOutScript;
     protected override void Awake()
@@ -27,12 +28,13 @@ public class playerMovement : CharacterMovement
         _animator = GetComponent<Animator>();
         _playerWeaponManager = GetComponent<PlayerWeaponManager>();
         _rigidBody2D = GetComponent<Rigidbody2D>();
-        _myColliders = GetComponents<Collider2D>();
+        _circleCollider2D = GetComponent<CircleCollider2D>();
     }
 
     private void Start()
     {
         playerHealth = GetComponent<CharacterHealth>();
+        _playerWeaponDurabilityManager = GetComponent<PlayerWeaponDurabilityManager>();
     }
     private void FixedUpdate()
     {
@@ -103,14 +105,21 @@ public class playerMovement : CharacterMovement
         }
     }
 
-    /*private void PlayerDeathSystem()
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        _animator.SetTrigger(TagManager.DEATH_ANIMATION_PARAMETER);
-        _rigidBody2D.velocity = Vector2.zero;
-        for (int i = 0; i < _myColliders.Length; i++)
+        if (col.GetComponent<Intractable>())
         {
-            _myColliders[i].enabled = false;
+            WeaponIntractSO _intractableSO = col.GetComponent<Intractable>()._weaponIntractSO;
+            if (!_intractableSO.IsHealthItem)
+            {
+                _playerWeaponDurabilityManager.AddWeaponDurability(_intractableSO.DurabilyAmountToAdd, _intractableSO.MyWeaponIndex);
+            }
+            else if (_intractableSO.IsHealthItem)
+            {
+                playerHealth.HealthTOADD(_intractableSO.HealthAmountToAdd);
+            }
+            Destroy(col.gameObject);
         }
 
-    }*/
+    }
 }

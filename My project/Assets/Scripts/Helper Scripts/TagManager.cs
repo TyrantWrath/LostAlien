@@ -27,6 +27,9 @@ public static class TagManager
     public static string WALK_ANIMATION_PARAMETER = "Walk";
     public static string DEATH_ANIMATION_PARAMETER = "Death";
     public static string OPEN_ANIMATION_PARAMETER = "Open";
+    public static string BULLET_EXIT_TIGGER_PARAMETER = "OnBulletExit";
+    public static string PLAYER_UI_GOT_DAMAGED_PARAMETER = "GotDamaged";
+    public static string PLAYER_UI_GOT_HEALED_PARAMETER = "GotHealed";
 
 
 

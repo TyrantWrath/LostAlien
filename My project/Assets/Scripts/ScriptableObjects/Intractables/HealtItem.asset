@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6643c05eb5ba134d8ef6e343dd842d1, type: 3}
-  m_Name: Laser
+  m_Script: {fileID: 11500000, guid: e6c0660512cda104a824a7d1f82a574c, type: 3}
+  m_Name: HealtItem
   m_EditorClassIdentifier: 
-  weaponName: Laser
-  weaponDamage: 20
-  weaponMaxDurabilty: 5
-  weaponDurability: 0
-  weaponSprite: {fileID: 21300000, guid: c15db7892aab10a429f5899b100eecaf, type: 3}
+  _mySprite: {fileID: -2071073165832475841, guid: a97851310964b3f43a6602c43ec44d08, type: 3}
+  myWeaponIndex: 0
+  durabilyAmountToAdd: 0
+  isHealthItem: 1
+  healthAmountToAdd: 25

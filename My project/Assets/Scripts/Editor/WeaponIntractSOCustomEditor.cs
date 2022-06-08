@@ -6,8 +6,8 @@ using UnityEditor;
 [CustomEditor(typeof(WeaponIntractSO))]
 public class WeaponIntractSOCustomEditor : Editor
 {
-    private bool isHealthItem = false;
-    private bool isWeaponItem = false;
+    //private bool isHealthItem = false;
+    // private bool isWeaponItem = false;
     public override void OnInspectorGUI()
     {
 

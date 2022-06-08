@@ -110,13 +110,13 @@ public class playerMovement : CharacterMovement
         if (col.GetComponent<Intractable>())
         {
             WeaponIntractSO _intractableSO = col.GetComponent<Intractable>()._weaponIntractSO;
-            if (!_intractableSO.IsHealthItem)
+            if (!_intractableSO.isHealthItem)
             {
-                _playerWeaponDurabilityManager.AddWeaponDurability(_intractableSO.DurabilyAmountToAdd, _intractableSO.MyWeaponIndex);
+                _playerWeaponDurabilityManager.AddWeaponDurability(_intractableSO.durabilyAmountToAdd, _intractableSO.myWeaponIndex);
             }
-            else if (_intractableSO.IsHealthItem)
+            else if (_intractableSO.isHealthItem)
             {
-                playerHealth.HealthTOADD(_intractableSO.HealthAmountToAdd);
+                playerHealth.HealthTOADD(_intractableSO.healthAmountToAdd);
             }
             Destroy(col.gameObject);
         }

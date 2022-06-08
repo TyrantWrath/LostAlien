@@ -8,20 +8,13 @@ public class WeaponIntractSO : ScriptableObject
     public Sprite _mySprite;
 
 
-    [Space(50)]
-    [Header("Fill only if Weapon Item")]
-    [SerializeField] public int myWeaponIndex;
-    [SerializeField] private float durabilyAmountToAdd;
+    [HideInInspector] public int myWeaponIndex { get; set; }
+    [HideInInspector] public float durabilyAmountToAdd { get; set; }
 
 
-    [Space(50)]
-    [Header("Fill only if Health Item")]
-    [SerializeField] private bool isHealthItem;
 
-    [SerializeField] private float healthAmountToAdd;
+    [HideInInspector] public bool isHealthItem { get; set; }
 
-    public int MyWeaponIndex { get { return myWeaponIndex; } }
-    public float DurabilyAmountToAdd { get { return durabilyAmountToAdd; } }
-    public bool IsHealthItem { get { return isHealthItem; } }
-    public float HealthAmountToAdd { get { return healthAmountToAdd; } }
+    [HideInInspector] public float healthAmountToAdd { get; set; }
+
 }

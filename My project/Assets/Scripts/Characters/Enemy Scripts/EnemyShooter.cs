@@ -37,6 +37,8 @@ public class EnemyShooter : MonoBehaviour
     [SerializeField] private Transform bulletSpawnPos;
     private CharacterHealth enemyHealth;
 
+    [Space(20)]
+    [Header("Select Enemy Group Here")]
     [SerializeField] private EnemyBatchHandler enemyBatch;
 
     private void Awake()

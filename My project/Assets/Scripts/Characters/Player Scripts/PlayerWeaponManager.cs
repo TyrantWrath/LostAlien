@@ -126,8 +126,5 @@ public class PlayerWeaponManager : MonoBehaviour
                 _playerWeaponDurabilityManager.PlasmaShotCounter(1);
                 break;
         }
-
-        //GameObject newBullet = Instantiate(weaponBullets[weaponIndex], spawnPos, bulletRotation);
-        //newBullet.GetComponent<Bullet>().MoveInDirection(direction);
     }
 }

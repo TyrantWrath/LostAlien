@@ -20,13 +20,18 @@ public class playerMovement : CharacterMovement
     private CircleCollider2D _circleCollider2D;
 
     private CameraFadeOutScript _cameraFadeOutScript;
+    private AudioManager _audioManager;
     protected override void Awake()
     {
         base.Awake();
+        _audioManager = GameObject.FindGameObjectWithTag(TagManager.AUDIO_MANAGER_TAG).GetComponent<AudioManager>();
+
         mainCam = Camera.main;
         _cameraFadeOutScript = mainCam.GetComponent<CameraFadeOutScript>();
+
         _animator = GetComponent<Animator>();
         _playerWeaponManager = GetComponent<PlayerWeaponManager>();
+
         _rigidBody2D = GetComponent<Rigidbody2D>();
         _circleCollider2D = GetComponent<CircleCollider2D>();
     }
@@ -41,6 +46,7 @@ public class playerMovement : CharacterMovement
         if (!playerHealth.IsAlive())
         {
             _cameraFadeOutScript.CameraFadeOutConditions(true);
+            _audioManager.PlayeDeathFadeOutAudio();
             return;
             //PlayerDeathSystem();
         }
@@ -87,19 +93,19 @@ public class playerMovement : CharacterMovement
             _playerWeaponManager.ActivateGun(0);
         }
 
-        if (x == 0f && y == 1f)
+        else if (x == 0f && y == 1f)
         {
             _playerWeaponManager.ActivateGun(1);
         }
-        if (x == 0f && y == -1f)
+        else if (x == 0f && y == -1f)
         {
             _playerWeaponManager.ActivateGun(2);
         }
-        if (x == 1f && y == 1f)
+        else if (x == 1f && y == 1f)
         {
             _playerWeaponManager.ActivateGun(3);
         }
-        if (x == 1f && y == -1f)
+        else if (x == 1f && y == -1f)
         {
             _playerWeaponManager.ActivateGun(4);
         }
@@ -110,14 +116,19 @@ public class playerMovement : CharacterMovement
         if (col.GetComponent<Intractable>())
         {
             WeaponIntractSO _intractableSO = col.GetComponent<Intractable>()._weaponIntractSO;
-            if (!_intractableSO.isHealthItem)
+
+            if (!_intractableSO.IsHealthItem)
             {
-                _playerWeaponDurabilityManager.AddWeaponDurability(_intractableSO.durabilyAmountToAdd, _intractableSO.myWeaponIndex);
+                _audioManager.PlayMedKitPickUpAudio();
+                _playerWeaponDurabilityManager.AddWeaponDurability(_intractableSO.DurabilityAmountTOAdd, _intractableSO.MyWeaponIndex);
             }
-            else if (_intractableSO.isHealthItem)
+
+            else if (_intractableSO.IsHealthItem)
             {
-                playerHealth.HealthTOADD(_intractableSO.healthAmountToAdd);
+                _audioManager.playWeaponPickUpAudio();
+                playerHealth.HealthTOADD(_intractableSO.HealthAmountToAdd);
             }
+
             Destroy(col.gameObject);
         }
 

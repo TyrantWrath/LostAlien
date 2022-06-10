@@ -36,6 +36,7 @@ public static class TagManager
     public static string BLOCKING_LAYER_MASK = "Blocking";
     public static string ENEMY_BULLET_TAG = "EnemyBullet";
     public static string BARRIER_LAYER_TAG = "BulletBarrier";
+    public static string AUDIO_MANAGER_TAG = "AudioManager";
 
     public static string PLAYER_WEAPON_OBJECT_NAME = "Gun Sprites";
 

@@ -5,16 +5,23 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Player/IntractablesSO", fileName = "Weapon Intract Info")]
 public class WeaponIntractSO : ScriptableObject
 {
-    public Sprite _mySprite;
+    [SerializeField] private Sprite _mySprite;
 
 
-    [HideInInspector] public int myWeaponIndex { get; set; }
-    [HideInInspector] public float durabilyAmountToAdd { get; set; }
+    [SerializeField] private int myWeaponIndex;
+    [SerializeField] private float durabilyAmountToAdd;
 
 
 
-    [HideInInspector] public bool isHealthItem { get; set; }
+    [SerializeField] private bool isHealthItem;
 
-    [HideInInspector] public float healthAmountToAdd { get; set; }
+    [SerializeField] private float healthAmountToAdd;
+
+
+    public Sprite _MySprite { get { return _mySprite; } }
+    public int MyWeaponIndex { get { return myWeaponIndex; } }
+    public float DurabilityAmountTOAdd { get { return durabilyAmountToAdd; } }
+    public bool IsHealthItem { get { return isHealthItem; } }
+    public float HealthAmountToAdd { get { return healthAmountToAdd; } }
 
 }

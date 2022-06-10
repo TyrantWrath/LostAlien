@@ -26,17 +26,22 @@ public class PlayerWeaponManager : MonoBehaviour
     private CharacterHealth playerHealth;
     private PlayerWeaponDurabilityManager _playerWeaponDurabilityManager;
     private PlayerWeaponUI _playerWeaponUI;
+    private AudioManager _audioManager;
 
     [SerializeField] private float shakeDuration = 0.2f;
     private void Awake()
     {
         weaponIndex = 0;
         playerWeapons[weaponIndex].gameObject.SetActive(true);
+
         mainCam = Camera.main;
         _cameraShake = mainCam.GetComponentInParent<CameraShake>();
+
         playerHealth = GetComponent<CharacterHealth>();
         _playerWeaponDurabilityManager = GetComponent<PlayerWeaponDurabilityManager>();
         _playerWeaponUI = GameObject.FindObjectOfType<Canvas>().GetComponent<PlayerWeaponUI>();
+
+        _audioManager = GameObject.FindGameObjectWithTag(TagManager.AUDIO_MANAGER_TAG).GetComponent<AudioManager>();
     }
 
     private void Update()
@@ -107,23 +112,27 @@ public class PlayerWeaponManager : MonoBehaviour
             case 0:
                 _cameraShake.ShakeCamera(blasterCameraShake, shakeDuration);
                 _playerWeaponDurabilityManager.BlasterShotCounter();
+                _audioManager.PlayBlasterWeaponAudio();
                 break;
 
             case 1:
                 _cameraShake.ShakeCamera(matterCameraShake, shakeDuration);
                 _playerWeaponDurabilityManager.AntiMatterShotCounter(1);
+                _audioManager.PlayAntiMatterWeaponAudio();
                 break;
 
 
             case 2:
                 _cameraShake.ShakeCamera(laserCameraShake, shakeDuration);
                 _playerWeaponDurabilityManager.LaserShotCounter(1);
+                _audioManager.PlayLaserWeaponAudio();
                 break;
 
 
             case 3:
                 _cameraShake.ShakeCamera(plasmaCameraShake, shakeDuration);
                 _playerWeaponDurabilityManager.PlasmaShotCounter(1);
+                _audioManager.PlayPlasmaWeaponAudio();
                 break;
         }
     }

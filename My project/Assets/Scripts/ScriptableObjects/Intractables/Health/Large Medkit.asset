@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c0660512cda104a824a7d1f82a574c, type: 3}
+  m_Name: Large Medkit
+  m_EditorClassIdentifier: 
+  _mySprite: {fileID: 3083166975610213223, guid: a97851310964b3f43a6602c43ec44d08, type: 3}
+  myWeaponIndex: 0
+  durabilyAmountToAdd: 0
+  isHealthItem: 1
+  healthAmountToAdd: 75

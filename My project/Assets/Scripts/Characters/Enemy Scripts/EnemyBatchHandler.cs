@@ -12,9 +12,12 @@ public class EnemyBatchHandler : MonoBehaviour
 
     [SerializeField] private List<EnemyShooter> shooterEnemies;
     [SerializeField] private GameObject batchGate;
+    AudioManager _audioManager;
 
     private void Start()
     {
+        _audioManager = GameObject.FindGameObjectWithTag(TagManager.AUDIO_MANAGER_TAG).GetComponent<AudioManager>();
+
         foreach (Transform tr in GetComponentInChildren<Transform>())
         {
             if (tr != this)
@@ -71,6 +74,7 @@ public class EnemyBatchHandler : MonoBehaviour
                 if (batchGate)
                 {
                     UnlockTheGate();
+
                 }
             }
         }
@@ -89,6 +93,7 @@ public class EnemyBatchHandler : MonoBehaviour
 
     private void UnlockTheGate()
     {
+        _audioManager.PlayGateOpeningAudio();
         batchGate.SetActive(false);
 
     }

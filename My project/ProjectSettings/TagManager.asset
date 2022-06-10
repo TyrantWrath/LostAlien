@@ -11,6 +11,7 @@ TagManager:
   - ShooterEnemy
   - BulletBarrier
   - EnemyBullet
+  - AudioManager
   layers:
   - Default
   - TransparentFX

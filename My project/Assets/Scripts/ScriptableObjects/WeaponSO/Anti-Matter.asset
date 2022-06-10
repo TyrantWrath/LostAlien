@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponName: Anti-Matter
   weaponDamage: 15
   weaponMaxDurabilty: 50
-  weaponStartingDurability: 50
+  weaponStartingDurability: 0
   weaponBulletSpeed: 0
-  weaponDurability: 45
+  weaponDurability: 38
   weaponSprite: {fileID: 21300000, guid: 4e4d7547606e1e14b917f9093795f198, type: 3}

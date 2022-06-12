@@ -11,7 +11,8 @@ public class EnemyBatchHandler : MonoBehaviour
     [SerializeField] private Transform shooterEnemyHolder;
 
     [SerializeField] private List<EnemyShooter> shooterEnemies;
-    [SerializeField] private GameObject batchGate;
+    [SerializeField] private GameObject[] batchGate;
+    [SerializeField] public bool canLockGate = true;
     AudioManager _audioManager;
 
     private void Start()
@@ -71,7 +72,7 @@ public class EnemyBatchHandler : MonoBehaviour
         {
             if (enemies.Count <= 0 && shooterEnemies.Count <= 0)
             {
-                if (batchGate)
+                if (batchGate != null)
                 {
                     UnlockTheGate();
 
@@ -82,7 +83,7 @@ public class EnemyBatchHandler : MonoBehaviour
         {
             if (enemies.Count <= 0)
             {
-                if (batchGate)
+                if (batchGate != null)
                 {
                     UnlockTheGate();
                 }
@@ -93,8 +94,12 @@ public class EnemyBatchHandler : MonoBehaviour
 
     private void UnlockTheGate()
     {
+        canLockGate = false;
         _audioManager.PlayGateOpeningAudio();
-        batchGate.SetActive(false);
+        for (int i = 0; i < batchGate.Length; i++)
+        {
+            batchGate[i].SetActive(false);
+        }
 
     }
 

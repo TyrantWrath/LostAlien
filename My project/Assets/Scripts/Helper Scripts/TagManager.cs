@@ -30,6 +30,8 @@ public static class TagManager
     public static string BULLET_EXIT_TIGGER_PARAMETER = "OnBulletExit";
     public static string PLAYER_UI_GOT_DAMAGED_PARAMETER = "GotDamaged";
     public static string PLAYER_UI_GOT_HEALED_PARAMETER = "GotHealed";
+    public static string OPEN_CHEST_ANIM_PARAMETER = "OpenChest";
+    public static string ENEMY_GOT_DAMAGED_PARAMETER = "GotDamgedEnemy";
 
 
 

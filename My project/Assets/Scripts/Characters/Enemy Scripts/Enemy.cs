@@ -28,6 +28,7 @@ public class Enemy : CharacterMovement
     [SerializeField] private float turningDelayRate;
 
     private Vector3 myScale;
+    private SpriteRenderer _spriteRenderer;
     private CharacterHealth enemyHealth;
     private EnemyBatchHandler _enemyBatch;
     private CameraShake _cameraShake;
@@ -55,6 +56,7 @@ public class Enemy : CharacterMovement
         enemyHealth = GetComponent<CharacterHealth>();
         _enemyBatch = GetComponentInParent<EnemyBatchHandler>();
         _collider2D = GetComponents<Collider2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
 
 
     }

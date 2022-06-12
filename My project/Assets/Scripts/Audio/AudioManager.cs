@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("GateAudioClip")]
     [SerializeField] AudioClip[] gateOpenings;
+    [SerializeField] AudioClip[] gateClosing;
 
     [Space(25)]
     [Header("FadeOut Audio")]
@@ -52,10 +53,16 @@ public class AudioManager : MonoBehaviour
         _audioSource.PlayOneShot(gateOpenings[Random.Range(0, 3)]);
     }
 
+    public void PlayGateClosingAudio()
+    {
+        _audioSource.PlayOneShot(gateClosing[Random.Range(0, 3)]);
+    }
+
     public void PlayeDeathFadeOutAudio()
     {
         _audioSource.PlayOneShot(playeDeathFadeOut[Random.Range(0, 2)]);
     }
+
 
     #region 
     public void PlayBlasterWeaponAudio()
@@ -63,6 +70,7 @@ public class AudioManager : MonoBehaviour
         _audioSource.volume = 0.30f;
         _audioSource.PlayOneShot(weaponIndex0[Random.Range(0, 2)]);
     }
+
     public void PlayAntiMatterWeaponAudio()
     {
         _audioSource.volume = 0.40f;
@@ -74,6 +82,7 @@ public class AudioManager : MonoBehaviour
         _audioSource.volume = 0.30f;
         _audioSource.PlayOneShot(weaponIndex2[Random.Range(0, 2)]);
     }
+
     public void PlayPlasmaWeaponAudio()
     {
         _audioSource.volume = 0.05f;
@@ -82,11 +91,13 @@ public class AudioManager : MonoBehaviour
     #endregion
 
 
+
     #region 
     public void playWeaponPickUpAudio()
     {
         _audioSource.PlayOneShot(medKitPickup[Random.Range(0, 3)]);
     }
+
     public void PlayMedKitPickUpAudio()
     {
         _audioSource.PlayOneShot(weaponPickUp[Random.Range(0, 2)]);

@@ -121,8 +121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e8e8df01f23ef4d9dd956e6783e7bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.2
-  rotationSpeed: 300
+  minSpeed: 0.6
+  maxSpeed: 1.3
+  maxRotationSpeed: 330
+  minRotationSpeed: 200
   damageAmount: 25
   enemyBulletShakeIntensity: 1
   enemyBulletShakeDuration: 0.3

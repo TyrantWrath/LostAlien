@@ -64,34 +64,9 @@ public class Bullet : MonoBehaviour
             #region 
             if (!dealtDamage)
             {
-                if (_playerWeaponManager.weaponIndex == 0)
-                {
-
-                    damageAmount = 10;
-                    dealtDamage = true;
-                    col.GetComponent<CharacterHealth>().TakeDamage(damageAmount);
-                }
-                else if (_playerWeaponManager.weaponIndex == 1)
-                {
-                    damageAmount = 15;
-                    dealtDamage = true;
-                    col.GetComponent<CharacterHealth>().TakeDamage(damageAmount);
-
-                }
-                else if (_playerWeaponManager.weaponIndex == 2)
-                {
-                    damageAmount = 20;
-                    dealtDamage = true;
-                    col.GetComponent<CharacterHealth>().TakeDamage(damageAmount);
-                }
-                else if (_playerWeaponManager.weaponIndex == 3)
-                {
-                    damageAmount = 25;
-                    dealtDamage = true;
-                    col.GetComponent<CharacterHealth>().TakeDamage(damageAmount);
-                }
-
-
+                damageAmount = 10;
+                dealtDamage = true;
+                col.GetComponent<CharacterHealth>().TakeDamage(damageAmount);
             }
             #endregion
         }

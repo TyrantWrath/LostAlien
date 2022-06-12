@@ -8,8 +8,10 @@ public class HomingMissile : MonoBehaviour
     private Transform target;
     [SerializeField] private float minSpeed = 0.7f;
     [SerializeField] private float maxSpeed = 1.3f;
+    private float speed;
     [SerializeField] private float maxRotationSpeed = 330f;
     [SerializeField] private float minRotationSpeed = 220f;
+    private float rotationValue;
 
     [SerializeField] private float damageAmount = 25f;
 
@@ -39,6 +41,10 @@ public class HomingMissile : MonoBehaviour
 
         _animator.SetBool(TagManager.EXPLODE_ANIMATION_PARAMETER, false);
         Invoke("DeactiveMissile", deactivateTimer);
+
+
+        rotationValue = Random.Range(minRotationSpeed, maxRotationSpeed);
+        speed = Random.Range(minSpeed, maxSpeed);
     }
     private void DeativateBullet()
     {
@@ -65,8 +71,9 @@ public class HomingMissile : MonoBehaviour
         dir.Normalize();
         float rotateAmount = Vector3.Cross(dir, transform.up).z;
 
-        _rigidBody2D.angularVelocity = -rotateAmount * Random.Range(minRotationSpeed, maxRotationSpeed);
-        _rigidBody2D.velocity = transform.up * Random.Range(minSpeed, maxSpeed);
+        _rigidBody2D.angularVelocity = -rotateAmount * rotationValue;
+        _rigidBody2D.velocity = transform.up * speed;
+
     }
     private void OnTriggerEnter2D(Collider2D col)
     {

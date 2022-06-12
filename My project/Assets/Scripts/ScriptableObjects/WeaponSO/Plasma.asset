@@ -15,6 +15,7 @@ MonoBehaviour:
   weaponName: Plasma
   weaponDamage: 25
   weaponMaxDurabilty: 50
+  weaponStartingDurability: 0
   weaponBulletSpeed: 0
-  weaponDurability: 26
+  weaponDurability: 45
   weaponSprite: {fileID: 21300000, guid: 2f1256c65414a3446ae2598c75ae3625, type: 3}

@@ -14,6 +14,15 @@ public class EnemyTargetController : MonoBehaviour
 
     [SerializeField] private BossMovement _bossMovement;
     [SerializeField] private bool bossZoneDetection;
+    [SerializeField] private GameObject _gateGameObject;
+    [SerializeField] private GameObject bossHealthUI;
+
+    private AudioManager _audioManager;
+
+    private void Awake()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag(TagManager.AUDIO_MANAGER_TAG).GetComponent<AudioManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -24,6 +33,14 @@ public class EnemyTargetController : MonoBehaviour
                 if (_enemyTargetType == EnemyTargetType.EnableEnemyTarget && _bossMovement)
                 {
                     _bossMovement.PlayerDetectedInfo(true);
+                    if (_gateGameObject != null && bossHealthUI != null && _gateGameObject.activeSelf == false)
+                    {
+                        _gateGameObject.SetActive(true);
+                        bossHealthUI.SetActive(true);
+                        _audioManager.PlayGateClosingAudio();
+                    }
+
+
                 }
                 else if (_enemyTargetType == EnemyTargetType.DisableEnemyTarget && _bossMovement)
                 {
@@ -40,6 +57,12 @@ public class EnemyTargetController : MonoBehaviour
                 if (_enemyTargetType == EnemyTargetType.EnableEnemyTarget)
                 {
                     _enemyBatchHandler.EnablePlayerTarget();
+                    if (_gateGameObject != null && _gateGameObject.activeSelf == false && _enemyBatchHandler.canLockGate)
+                    {
+                        _gateGameObject.SetActive(true);
+                        _audioManager.PlayGateClosingAudio();
+                    }
+
                 }
                 else
                 {

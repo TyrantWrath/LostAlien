@@ -36,6 +36,7 @@ public class EnemyShooter : MonoBehaviour
 
     [SerializeField] private Transform bulletSpawnPos;
     private CharacterHealth enemyHealth;
+    private Collider2D[] _collider2D;
 
     [Space(20)]
     [Header("Select Enemy Group Here")]
@@ -72,6 +73,8 @@ public class EnemyShooter : MonoBehaviour
     private void Start()
     {
         playerTransform = GameObject.FindWithTag(TagManager.PLAYER_TAG).transform;
+
+        _collider2D = GetComponents<Collider2D>();
     }
     private void OnDisable()
     {
@@ -86,7 +89,15 @@ public class EnemyShooter : MonoBehaviour
     private void Update()
     {
         if (!enemyHealth.IsAlive() || !playerTransform)
-            return;
+        {
+            if (!enemyHealth.IsAlive())
+            {
+                for (int i = 0; i < _collider2D.Length; i++)
+                {
+                    _collider2D[i].enabled = false;
+                }
+            }
+        }
 
         CheckToShootPlayer();
     }

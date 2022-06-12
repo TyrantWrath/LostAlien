@@ -11,10 +11,16 @@ public class PlayerWeaponManager : MonoBehaviour
     [Header("WeaponBulletList")]
     [SerializeField] GameObject[] weaponBullets;
 
+    [Space(25)]
+    [Header("WeaponBulletList")]
+    [SerializeField] ParticleSystem[] _particleSystems;
+
     [SerializeField] float blasterCameraShake;
     [SerializeField] float laserCameraShake;
     [SerializeField] float matterCameraShake;
     [SerializeField] float plasmaCameraShake;
+
+
 
     private Vector2 targetPos;
     private Vector2 direction;
@@ -113,12 +119,14 @@ public class PlayerWeaponManager : MonoBehaviour
                 _cameraShake.ShakeCamera(blasterCameraShake, shakeDuration);
                 _playerWeaponDurabilityManager.BlasterShotCounter();
                 _audioManager.PlayBlasterWeaponAudio();
+                _particleSystems[0].Play(false);
                 break;
 
             case 1:
                 _cameraShake.ShakeCamera(matterCameraShake, shakeDuration);
                 _playerWeaponDurabilityManager.AntiMatterShotCounter(1);
                 _audioManager.PlayAntiMatterWeaponAudio();
+                _particleSystems[1].Play(false);
                 break;
 
 
@@ -126,6 +134,7 @@ public class PlayerWeaponManager : MonoBehaviour
                 _cameraShake.ShakeCamera(laserCameraShake, shakeDuration);
                 _playerWeaponDurabilityManager.LaserShotCounter(1);
                 _audioManager.PlayLaserWeaponAudio();
+                _particleSystems[2].Play(false);
                 break;
 
 
@@ -133,6 +142,7 @@ public class PlayerWeaponManager : MonoBehaviour
                 _cameraShake.ShakeCamera(plasmaCameraShake, shakeDuration);
                 _playerWeaponDurabilityManager.PlasmaShotCounter(1);
                 _audioManager.PlayPlasmaWeaponAudio();
+                _particleSystems[3].Play(false);
                 break;
         }
     }

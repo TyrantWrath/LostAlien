@@ -10,7 +10,10 @@ public enum EnemyBulletType
     SlowSpread,
     BurstShot,
     ShotGunBlast,
-    homingMissileShot,
+    HomingMissileShot,
+    BurstMissileShot,
+    SpreadMissileShot,
+    NormalMissileShot
 }
 public class EnemyShooterController : MonoBehaviour
 {
@@ -35,7 +38,7 @@ public class EnemyShooterController : MonoBehaviour
         enumValues.Add(4, EnemyBulletType.SlowSpread);
         enumValues.Add(5, EnemyBulletType.BurstShot);
         enumValues.Add(6, EnemyBulletType.ShotGunBlast);
-        enumValues.Add(7, EnemyBulletType.homingMissileShot);
+        enumValues.Add(7, EnemyBulletType.HomingMissileShot);
 
     }
 
@@ -88,12 +91,25 @@ public class EnemyShooterController : MonoBehaviour
                 ShotGunShot(direction, origin);
                 break;
 
-            case EnemyBulletType.homingMissileShot:
+            case EnemyBulletType.HomingMissileShot:
+                HomingMissileShot(direction, origin);
+                break;
+
+            case EnemyBulletType.BurstMissileShot:
+                BurstMissileShot(direction, origin);
+                break;
+
+            case EnemyBulletType.SpreadMissileShot:
+                HomingMissileShot(direction, origin);
+                break;
+
+            case EnemyBulletType.NormalMissileShot:
                 HomingMissileShot(direction, origin);
                 break;
         }
     }
 
+    #region 
     private void SpreadShot(Vector3 direction, Vector3 origin, bool isBulletSlow)
     {
         float offset = 0.5f;
@@ -150,31 +166,16 @@ public class EnemyShooterController : MonoBehaviour
     private void ShotGunShot(Vector3 direction, Vector3 origin)
     {
         float offset = 0.2f;
-        float homingOffset = 360;
 
-        if (!isHomingMissile)
+        for (int i = 0; i < numberOfShotGunShots; i++)
         {
-            for (int i = 0; i < numberOfShotGunShots; i++)
-            {
-                Quaternion rot = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
-                GameObject bullet = Instantiate(enemyBullet, origin, rot);
+            Quaternion rot = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
+            GameObject bullet = Instantiate(enemyBullet, origin, rot);
 
-                bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+            bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
 
-                direction.x += Random.Range(-offset, offset);
-                direction.y += Random.Range(-offset, offset);
-            }
-        }
-
-        else if (isHomingMissile)
-        {
-            for (int i = 0; i < numberOfShotGunShots; i++)
-            {
-                Quaternion rot = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x)
-                * Mathf.Rad2Deg * Random.Range(-homingOffset, homingOffset));
-
-                GameObject bullet = Instantiate(enemyMissile, origin, rot);
-            }
+            direction.x += Random.Range(-offset, offset);
+            direction.y += Random.Range(-offset, offset);
         }
 
     }
@@ -187,6 +188,10 @@ public class EnemyShooterController : MonoBehaviour
         bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
     }
 
+    #endregion
+
+
+    #region 
     private void HomingMissileShot(Vector3 direction, Vector3 origin)
     {
         float offset = 360;
@@ -196,5 +201,27 @@ public class EnemyShooterController : MonoBehaviour
         GameObject bullet = Instantiate(enemyMissile, origin, rot);
 
     }
+
+    private void BurstMissileShot(Vector3 direction, Vector3 origin)
+    {
+        float offset = 360;
+        Quaternion rot = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x)
+        * Mathf.Rad2Deg * Random.Range(-offset, offset));
+        StartCoroutine(DelayBeforeTheNextMissileShot(direction, origin, rot));
+    }
+
+
+    IEnumerator DelayBeforeTheNextMissileShot(Vector3 direction, Vector3 origin, Quaternion rot)
+    {
+        GameObject bullet = Instantiate(enemyMissile, origin, rot);
+
+        yield return new WaitForSeconds(0.1f);
+        GameObject bullet1 = Instantiate(enemyMissile, origin, rot);
+
+        yield return new WaitForSeconds(0.1f);
+        GameObject bullet2 = Instantiate(enemyMissile, origin, rot);
+
+    }
+    #endregion
 
 }

@@ -8,6 +8,7 @@ public class PlayerShootingManager : MonoBehaviour
     private float shootingTimer;
 
     [SerializeField] Transform bulletSpawnPos;
+
     private Animator shootingAnimation;
     private CharacterHealth _characterHealth;
 
@@ -49,6 +50,7 @@ public class PlayerShootingManager : MonoBehaviour
     void CreateBullet()
     {
         playerWeaponManager.Shoot(bulletSpawnPos.position);
+
     }
 
 }

@@ -20,13 +20,19 @@ public class BossMovement : MonoBehaviour
 
     [SerializeField] private float damageAmount = 15f;
 
-    [SerializeField] float shootTimerDelay = 2f;
-    [SerializeField] float shootTimer;
-    [SerializeField] GameObject normalLight;
-    [SerializeField] GameObject chaseLight;
-    [SerializeField] GameObject bossGate;
+    [SerializeField] private float shootTimerDelay = 2f;
+    [SerializeField] private float shootTimer;
+
+    [Header("CameraShake Handler")]
+    [SerializeField] private float shakeIntensity;
+    [SerializeField] private float shakeDuration;
+
+    [SerializeField] private GameObject normalLight;
+    [SerializeField] private GameObject chaseLight;
+    [SerializeField] private GameObject bossGate;
     private EnemyShooterController _enemyShooterController;
     private CharacterHealth bossHealth;
+    private CameraShake _cameraShake;
 
     private void Start()
     {
@@ -36,6 +42,7 @@ public class BossMovement : MonoBehaviour
 
         _enemyShooterController = GetComponent<EnemyShooterController>();
         bossHealth = GetComponent<CharacterHealth>();
+        _cameraShake = Camera.main.GetComponentInParent<CameraShake>();
     }
 
     private void Update()
@@ -78,7 +85,7 @@ public class BossMovement : MonoBehaviour
         {
             if (playerDetected)
             {
-                if (Random.Range(0, 10) < 7)
+                if (Random.Range(0, 10) >= 7)
                 {
                     targetPosition = playerTarget.position;
                     chasePlayer = true;
@@ -176,6 +183,7 @@ public class BossMovement : MonoBehaviour
             chasePlayer = false;
             GetRandomMovementPosition();
             col.GetComponent<CharacterHealth>().TakeDamage(damageAmount);
+            _cameraShake.ShakeCamera(shakeIntensity, shakeDuration);
         }
     }
 

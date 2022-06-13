@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: -1312257341
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6112890488319390909, guid: 0b67c8cf176129c4ba8113658e6734c9, type: 3}
+  m_Sprite: {fileID: -6331664980684406410, guid: 0b67c8cf176129c4ba8113658e6734c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -129,6 +129,7 @@ MonoBehaviour:
   enemyBulletShakeIntensity: 1
   enemyBulletShakeDuration: 0.3
   deactivateTimer: 5
+  _particleSystem: {fileID: 0}
 --- !u!58 &6589042251787636950
 CircleCollider2D:
   m_ObjectHideFlags: 0

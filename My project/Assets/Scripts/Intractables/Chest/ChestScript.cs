@@ -61,6 +61,5 @@ public class ChestScript : MonoBehaviour
         {
             chestCanSpawnLoot = false;
         }
-
     }
 }

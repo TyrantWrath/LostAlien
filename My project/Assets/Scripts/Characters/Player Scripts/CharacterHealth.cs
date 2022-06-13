@@ -13,6 +13,7 @@ public class CharacterHealth : MonoBehaviour
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
     [SerializeField] Animator _heartAnimator;
+    [SerializeField] ParticleSystem _particleSystem;
 
     void Awake()
     {
@@ -48,8 +49,10 @@ public class CharacterHealth : MonoBehaviour
             _heartAnimator.SetTrigger(TagManager.PLAYER_UI_GOT_DAMAGED_PARAMETER);
             SliderUI();
         }
+
         else if (_heartAnimator == null)
         {
+            _particleSystem.Play(false);
             StartCoroutine(ChangeColor());
         }
         if (bossHealth != null)
@@ -63,6 +66,10 @@ public class CharacterHealth : MonoBehaviour
             _animator.SetTrigger(TagManager.DEATH_ANIMATION_PARAMETER);
         }
 
+    }
+    public void PlayerParticleEffect()
+    {
+        _particleSystem.Play(false);
     }
     /*private void Update()
     {

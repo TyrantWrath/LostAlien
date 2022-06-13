@@ -64,9 +64,8 @@ public class Bullet : MonoBehaviour
             #region 
             if (!dealtDamage)
             {
-                damageAmount = 10;
-                dealtDamage = true;
                 col.GetComponent<CharacterHealth>().TakeDamage(damageAmount);
+                dealtDamage = true;
             }
             #endregion
         }

@@ -77,19 +77,20 @@ public class HomingMissile : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
+
         if (col.CompareTag(TagManager.BLOCKING_TAG) || col.CompareTag(TagManager.BULLET_TAG))
         {
-            _rigidBody2D.velocity = Vector2.zero;
             CancelInvoke("DeactiveMissile");
 
+            _rigidBody2D.velocity = Vector3.zero;
             _animator.SetTrigger(TagManager.EXPLODE_ANIMATION_PARAMETER);
         }
 
         else if (col.CompareTag(TagManager.PLAYER_TAG))
         {
-            _rigidBody2D.velocity = Vector2.zero;
             CancelInvoke("DeactiveMissile");
 
+            _rigidBody2D.velocity = Vector3.zero;
             _animator.SetTrigger(TagManager.EXPLODE_ANIMATION_PARAMETER);
 
             if (!dealthDamage)
@@ -97,6 +98,8 @@ public class HomingMissile : MonoBehaviour
                 dealthDamage = true;
 
                 col.GetComponent<CharacterHealth>().TakeDamage(damageAmount);
+                col.GetComponent<CharacterHealth>().PlayerParticleEffect();
+
                 _cameraShake.ShakeCamera(enemyBulletShakeIntensity, enemyBulletShakeDuration);
             }
         }

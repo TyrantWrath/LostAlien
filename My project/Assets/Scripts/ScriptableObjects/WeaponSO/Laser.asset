@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponName: Laser
   weaponDamage: 20
   weaponMaxDurabilty: 50
-  weaponStartingDurability: 0
+  weaponStartingDurability: 50
   weaponBulletSpeed: 0
   weaponDurability: 0
   weaponSprite: {fileID: 21300000, guid: c15db7892aab10a429f5899b100eecaf, type: 3}

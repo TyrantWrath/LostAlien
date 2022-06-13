@@ -1,0 +1,109 @@
+Date : 2022-06-12 20:13:50
+Directory : g:\GitHub\LostAlien\My project
+Total : 59 files,  8482 codes, 147 comments, 1240 blanks, all 9869 lines
+
+Languages
++-----------+------------+------------+------------+------------+------------+
+| language  | files      | code       | comment    | blank      | total      |
++-----------+------------+------------+------------+------------+------------+
+| C#        |         30 |      2,162 |         51 |        528 |      2,741 |
+| ShaderLab |         13 |      2,015 |         61 |        557 |      2,633 |
+| XML       |          2 |      1,674 |         14 |          2 |      1,690 |
+| Log       |          7 |      1,607 |          0 |         62 |      1,669 |
+| JSON      |          3 |        701 |          0 |          4 |        705 |
+| HLSL      |          4 |        323 |         21 |         87 |        431 |
++-----------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                    | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                       |         59 |      8,482 |        147 |      1,240 |      9,869 |
+| Assets                                                                                                                  |         48 |      4,655 |        133 |      1,174 |      5,962 |
+| Assets\Scripts                                                                                                          |         29 |      2,135 |         50 |        522 |      2,707 |
+| Assets\Scripts\Audio                                                                                                    |          1 |         82 |          0 |         25 |        107 |
+| Assets\Scripts\Bullet scripts                                                                                           |          4 |        371 |          8 |         85 |        464 |
+| Assets\Scripts\CameraScripts                                                                                            |          3 |        150 |         31 |         57 |        238 |
+| Assets\Scripts\Characters                                                                                               |         15 |      1,334 |         10 |        291 |      1,635 |
+| Assets\Scripts\Characters\Boss Man                                                                                      |          1 |        154 |          0 |         38 |        192 |
+| Assets\Scripts\Characters\Enemy Scripts                                                                                 |          7 |        705 |          2 |        168 |        875 |
+| Assets\Scripts\Characters\Enemy Scripts\EnemyShooter                                                                    |          1 |        176 |          1 |         51 |        228 |
+| Assets\Scripts\Characters\Player Scripts                                                                                |          7 |        475 |          8 |         85 |        568 |
+| Assets\Scripts\Characters\Player Scripts\Weapon Scripts                                                                 |          2 |         56 |          0 |          7 |         63 |
+| Assets\Scripts\Helper Scripts                                                                                           |          1 |         32 |          0 |         15 |         47 |
+| Assets\Scripts\Intractables                                                                                             |          2 |         66 |          0 |         20 |         86 |
+| Assets\Scripts\Intractables\Chest                                                                                       |          1 |         53 |          0 |         14 |         67 |
+| Assets\Scripts\UI                                                                                                       |          3 |        100 |          1 |         29 |        130 |
+| Assets\Scripts\UI\ScriptableObjectScripts                                                                               |          2 |         38 |          0 |         15 |         53 |
+| Assets\TextMesh Pro                                                                                                     |         18 |      2,493 |         82 |        646 |      3,221 |
+| Assets\TextMesh Pro\Shaders                                                                                             |         17 |      2,338 |         82 |        644 |      3,064 |
+| Assets\TextMesh Pro\Sprites                                                                                             |          1 |        155 |          0 |          2 |        157 |
+| Logs                                                                                                                    |          7 |      1,607 |          0 |         62 |      1,669 |
+| Packages                                                                                                                |          2 |        546 |          0 |          2 |        548 |
++-------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------------+-----------+------------+------------+------------+------------+
+| filename                                                                                                                | language  | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------+-----------+------------+------------+------------+------------+
+| g:\GitHub\LostAlien\My project\Assembly-CSharp-Editor.csproj                                                            | XML       |        834 |          7 |          1 |        842 |
+| g:\GitHub\LostAlien\My project\Assembly-CSharp.csproj                                                                   | XML       |        840 |          7 |          1 |        848 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Audio\AudioManager.cs                                                     | C#        |         82 |          0 |         25 |        107 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Bullet scripts\Bullet.cs                                                  | C#        |         82 |          8 |         16 |        106 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Bullet scripts\BulletPool.cs                                              | C#        |        126 |          0 |         21 |        147 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Bullet scripts\EnemyBullet.cs                                             | C#        |         78 |          0 |         20 |         98 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Bullet scripts\HomingMissile.cs                                           | C#        |         85 |          0 |         28 |        113 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\CameraScripts\CameraFadeOutScript.cs                                      | C#        |         67 |          0 |         12 |         79 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\CameraScripts\CameraFollow.cs                                             | C#        |         48 |          0 |          6 |         54 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\CameraScripts\CameraShake.cs                                              | C#        |         35 |         31 |         39 |        105 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Boss Man\BossMovement.cs                                       | C#        |        154 |          0 |         38 |        192 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Enemy Scripts\DetectionZone.cs                                 | C#        |         25 |          0 |          7 |         32 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Enemy Scripts\Enemy.cs                                         | C#        |        162 |          1 |         32 |        195 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Enemy Scripts\EnemyAnimation.cs                                | C#        |         35 |          0 |          8 |         43 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Enemy Scripts\EnemyBatchHandler.cs                             | C#        |         90 |          0 |         17 |        107 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Enemy Scripts\EnemyShooter.cs                                  | C#        |        154 |          0 |         39 |        193 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Enemy Scripts\EnemyShooter\EnemyShooterController.cs           | C#        |        176 |          1 |         51 |        228 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Enemy Scripts\EnemyTargetController.cs                         | C#        |         63 |          0 |         14 |         77 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Player Scripts\CharacterHealth.cs                              | C#        |         90 |          7 |         18 |        115 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Player Scripts\CharacterMovement.cs                            | C#        |         42 |          0 |          4 |         46 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Player Scripts\PlayerShootingManager.cs                        | C#        |         45 |          0 |         12 |         57 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Player Scripts\PlayerWeaponManager.cs                          | C#        |        127 |          0 |         23 |        150 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Player Scripts\Weapon Scripts\PlayerWeaponDurabilityManager.cs | C#        |         31 |          0 |          4 |         35 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Player Scripts\Weapon Scripts\WeaponManager.cs                 | C#        |         25 |          0 |          3 |         28 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Player Scripts\playerMovement.cs                               | C#        |        115 |          1 |         21 |        137 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Helper Scripts\TagManager.cs                                              | C#        |         32 |          0 |         15 |         47 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Intractables\Chest\ChestScript.cs                                         | C#        |         53 |          0 |         14 |         67 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Intractables\Intractable.cs                                               | C#        |         13 |          0 |          6 |         19 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\UI\PlayerWeaponUI.cs                                                      | C#        |         62 |          1 |         14 |         77 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\UI\ScriptableObjectScripts\PlayerWeaponSO.cs                              | C#        |         21 |          0 |          4 |         25 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\UI\ScriptableObjectScripts\WeaponIntractSO.cs                             | C#        |         17 |          0 |         11 |         28 |
+| g:\GitHub\LostAlien\My project\Assets\TestScript.cs                                                                     | C#        |         27 |          1 |          6 |         34 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader                               | ShaderLab |        109 |          2 |         33 |        144 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader                                     | ShaderLab |        112 |          3 |         31 |        146 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader                                            | ShaderLab |        109 |          2 |         33 |        144 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader                                       | ShaderLab |        243 |          4 |         71 |        318 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader                                           | ShaderLab |        241 |          4 |         66 |        311 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader                                | ShaderLab |        188 |         10 |         50 |        248 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader                                | ShaderLab |        183 |          8 |         50 |        241 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader                                    | ShaderLab |         82 |          4 |         21 |        107 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader                                        | ShaderLab |        183 |          8 |         50 |        241 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader                                | ShaderLab |        103 |          8 |         28 |        139 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader                                       | ShaderLab |        122 |          4 |         33 |        159 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMP_SDF.shader                                               | ShaderLab |        243 |          4 |         71 |        318 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMP_Sprite.shader                                            | ShaderLab |         97 |          0 |         20 |        117 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMPro.cginc                                                  | HLSL      |         63 |          2 |         20 |         85 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc                                           | HLSL      |        122 |          2 |         34 |        158 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc                                       | HLSL      |         62 |         10 |         14 |         86 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc                                          | HLSL      |         76 |          7 |         19 |        102 |
+| g:\GitHub\LostAlien\My project\Assets\TextMesh Pro\Sprites\EmojiOne.json                                                | JSON      |        155 |          0 |          2 |        157 |
+| g:\GitHub\LostAlien\My project\Logs\AssetImportWorker0-prev.log                                                         | Log       |        595 |          0 |         20 |        615 |
+| g:\GitHub\LostAlien\My project\Logs\AssetImportWorker0.log                                                              | Log       |        957 |          0 |         30 |        987 |
+| g:\GitHub\LostAlien\My project\Logs\Packages-Update.log                                                                 | Log       |         47 |          0 |          4 |         51 |
+| g:\GitHub\LostAlien\My project\Logs\shadercompiler-AssetImportWorker0.log                                               | Log       |          2 |          0 |          2 |          4 |
+| g:\GitHub\LostAlien\My project\Logs\shadercompiler-UnityShaderCompiler.exe0.log                                         | Log       |          2 |          0 |          2 |          4 |
+| g:\GitHub\LostAlien\My project\Logs\shadercompiler-UnityShaderCompiler.exe1.log                                         | Log       |          2 |          0 |          2 |          4 |
+| g:\GitHub\LostAlien\My project\Logs\shadercompiler-UnityShaderCompiler.exe2.log                                         | Log       |          2 |          0 |          2 |          4 |
+| g:\GitHub\LostAlien\My project\Packages\manifest.json                                                                   | JSON      |         53 |          0 |          1 |         54 |
+| g:\GitHub\LostAlien\My project\Packages\packages-lock.json                                                              | JSON      |        493 |          0 |          1 |        494 |
+| Total                                                                                                                   |           |      8,482 |        147 |      1,240 |      9,869 |
++-------------------------------------------------------------------------------------------------------------------------+-----------+------------+------------+------------+------------+

@@ -21,7 +21,6 @@ public class PlayerWeaponManager : MonoBehaviour
     [SerializeField] float plasmaCameraShake;
 
 
-
     private Vector2 targetPos;
     private Vector2 direction;
     private Camera mainCam;

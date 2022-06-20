@@ -1,0 +1,15 @@
+"filename", "language", "XML", "C#", "Log", "comment", "blank", "total"
+"g:\GitHub\LostAlien\My project\Assembly-CSharp.csproj", "XML", 1, 0, 0, 0, 0, 1
+"g:\GitHub\LostAlien\My project\Assets\Scripts\Bullet scripts\EnemyBullet.cs", "C#", 0, 1, 0, 0, 4, 5
+"g:\GitHub\LostAlien\My project\Assets\Scripts\Bullet scripts\HomingMissile.cs", "C#", 0, -4, 0, 0, -1, -5
+"g:\GitHub\LostAlien\My project\Assets\Scripts\CameraScripts\CameraFadeOutScript.cs", "C#", 0, 12, 0, 0, 1, 13
+"g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Boss Man\BossMovement.cs", "C#", 0, 10, 0, 0, 0, 10
+"g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Enemy Scripts\EnemyShooter\EnemyShooterController.cs", "C#", 0, 38, 0, 0, 9, 47
+"g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Player Scripts\playerMovement.cs", "C#", 0, 0, 0, 0, 1, 1
+"g:\GitHub\LostAlien\My project\Assets\Scripts\Intractables\Chest\ChestScript.cs", "C#", 0, 0, 0, 0, -1, -1
+"g:\GitHub\LostAlien\My project\Assets\Scripts\SceneManagerScript.cs", "C#", 0, 19, 0, 0, 3, 22
+"g:\GitHub\LostAlien\My project\Logs\AssetImportWorker0-prev.log", "Log", 0, 0, -595, 0, -20, -615
+"g:\GitHub\LostAlien\My project\Logs\AssetImportWorker0.log", "Log", 0, 0, 60, 0, 4, 64
+"g:\GitHub\LostAlien\My project\Logs\shadercompiler-UnityShaderCompiler.exe1.log", "Log", 0, 0, -2, 0, -2, -4
+"g:\GitHub\LostAlien\My project\Logs\shadercompiler-UnityShaderCompiler.exe2.log", "Log", 0, 0, -2, 0, -2, -4
+"Total", "-", 1, 76, -539, 0, -4, -466

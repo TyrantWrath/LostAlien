@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1554055242
 Transform:
   m_ObjectHideFlags: 0
@@ -286,7 +286,7 @@ MonoBehaviour:
   maxHealth: 100
   health: 0
   _slider: {fileID: 0}
-  bossHealth: {fileID: 0}
+  bossHealthUI: {fileID: 0}
   _heartAnimator: {fileID: 0}
   _particleSystem: {fileID: 3015333226043333708}
 --- !u!114 &3578179156218938501
@@ -323,6 +323,7 @@ MonoBehaviour:
   enemyMissile: {fileID: 6589042251787636957, guid: 44b5ecbb491ae0147acac72589f5fda8, type: 3}
   numberOfBullet: 4
   numberOfShotGunShots: 8
+  numberOfPatternShots: 10
   isHomingMissile: 0
   bulletType: 8
   bulletYUPE: []
@@ -352,7 +353,7 @@ MonoBehaviour:
   - {x: 0.026331425, y: -0.060449004, z: 0}
   m_ShapePathHash: 665700693
   m_Mesh: {fileID: 0}
-  m_InstanceId: -24544
+  m_InstanceId: -314358
 --- !u!1 &3578179157155963747
 GameObject:
   m_ObjectHideFlags: 0

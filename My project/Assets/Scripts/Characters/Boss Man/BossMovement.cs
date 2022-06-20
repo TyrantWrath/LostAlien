@@ -19,9 +19,10 @@ public class BossMovement : MonoBehaviour
     private bool chasePlayer;
 
     [SerializeField] private float damageAmount = 15f;
-
     [SerializeField] private float shootTimerDelay = 2f;
+    [SerializeField] private bool bossShootOnRandom = true;
     [SerializeField] private float shootTimer;
+    [SerializeField] private bool bossLevel3;
 
     [Header("CameraShake Handler")]
     [SerializeField] private float shakeIntensity;
@@ -30,6 +31,7 @@ public class BossMovement : MonoBehaviour
     [SerializeField] private GameObject normalLight;
     [SerializeField] private GameObject chaseLight;
     [SerializeField] private GameObject bossGate;
+    [SerializeField] private GameObject bossHealthUIImage;
     private EnemyShooterController _enemyShooterController;
     private CharacterHealth bossHealth;
     private CameraShake _cameraShake;
@@ -51,6 +53,7 @@ public class BossMovement : MonoBehaviour
         {
             return;
         }
+
         HandleMovement();
         HandleFacingDirection();
 
@@ -63,6 +66,7 @@ public class BossMovement : MonoBehaviour
         if (!bossHealth.IsAlive())
         {
             bossGate.SetActive(false);
+            bossHealthUIImage.gameObject.SetActive(false);
         }
     }
 
@@ -73,7 +77,6 @@ public class BossMovement : MonoBehaviour
         while (targetPosition == movementPositions[randomIndex].position)
         {
             randomIndex = Random.Range(0, movementPositions.Length);
-
         }
         targetPosition = movementPositions[randomIndex].position;
     }
@@ -171,7 +174,29 @@ public class BossMovement : MonoBehaviour
             {
                 shootTimer = Time.time + shootTimerDelay;
                 Vector2 direction = (playerTarget.position - transform.position).normalized;
-                _enemyShooterController.ShootOnRandom(direction, transform.position);
+                if (!bossLevel3)
+                {
+                    if (bossShootOnRandom)
+                    {
+                        _enemyShooterController.ShootOnRandom(direction, transform.position);
+                    }
+                    else
+                    {
+                        _enemyShooterController.Shoot(direction, transform.position);
+                    }
+                }
+                else if (bossLevel3)
+                {
+                    if (bossShootOnRandom)
+                    {
+                        _enemyShooterController.ShootOnRandom2(direction, transform.position);
+                    }
+                    else
+                    {
+                        _enemyShooterController.Shoot(direction, transform.position);
+                    }
+                }
+
             }
         }
     }

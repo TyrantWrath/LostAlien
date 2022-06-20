@@ -81,13 +81,18 @@ public class EnemyBullet : MonoBehaviour
         else if (col.CompareTag(TagManager.PLAYER_TAG))
         {
             _rigidBody2D.velocity = Vector2.zero;
+
             CancelInvoke("DeativeBullet");
+
             _animator.SetTrigger(TagManager.EXPLODE_ANIMATION_PARAMETER);
 
             if (!dealthDamage)
             {
                 dealthDamage = true;
+
                 col.GetComponent<CharacterHealth>().TakeDamage(damageAmount);
+                col.GetComponent<CharacterHealth>().PlayerParticleEffect();
+
                 _cameraShake.ShakeCamera(enemyBulletShakeIntensity, enemyBulletShakeDuration);
             }
         }

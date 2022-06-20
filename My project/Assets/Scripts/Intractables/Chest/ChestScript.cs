@@ -7,6 +7,8 @@ public class ChestScript : MonoBehaviour
     [SerializeField] private GameObject pressEButton;
 
     [SerializeField] private GameObject[] lootArray;
+    [SerializeField] private bool isPreDetermined = false;
+    [SerializeField] private int[] arrayNumber;
     private int theLootIndex;
     private bool chestCanSpawnLoot;
 
@@ -33,13 +35,26 @@ public class ChestScript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 _animator.SetTrigger(TagManager.OPEN_CHEST_ANIM_PARAMETER);
-
-                lootArray[theLootIndex].SetActive(true);
                 chestCanSpawnLoot = false;
                 gameObject.GetComponent<CircleCollider2D>().enabled = false;
-            }
-            pressEButton.SetActive(true);
 
+                if (!isPreDetermined)
+                {
+                    lootArray[theLootIndex].SetActive(true);
+
+                }
+
+                else if (isPreDetermined)
+                {
+                    for (int i = 0; i < arrayNumber.Length; i++)
+                    {
+                        lootArray[arrayNumber[i]].SetActive(true);
+                    }
+                }
+
+            }
+
+            pressEButton.SetActive(true);
         }
         else
         {

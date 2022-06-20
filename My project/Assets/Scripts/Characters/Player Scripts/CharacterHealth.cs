@@ -8,7 +8,7 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] private float health;
     [SerializeField] private Slider _slider;
-    [SerializeField] private Image bossHealth;
+    public Image bossHealthUI;
 
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
@@ -55,10 +55,9 @@ public class CharacterHealth : MonoBehaviour
             _particleSystem.Play(false);
             StartCoroutine(ChangeColor());
         }
-        if (bossHealth != null)
+        if (bossHealthUI != null)
         {
-            bossHealth.fillAmount = Mathf.Clamp(health, 0, health) / 199;
-            Debug.Log(bossHealth.fillAmount);
+            bossHealthUI.fillAmount = Mathf.Clamp(health, 0, health) / 199;
         }
         if (health <= 0f)
         {

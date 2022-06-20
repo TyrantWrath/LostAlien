@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraFadeOutScript : MonoBehaviour
 {
     public KeyCode key = KeyCode.Space;
     [SerializeField] private float speedScale = 1f;
     [SerializeField] private Color fadeColor = Color.black;
+    [SerializeField] private string sceneNameToLoad;
 
     [SerializeField]
     private AnimationCurve Curve = new AnimationCurve(new Keyframe(0, 1),
@@ -33,6 +35,7 @@ public class CameraFadeOutScript : MonoBehaviour
         texture = new Texture2D(1, 1);
         texture.SetPixel(0, 0, new Color(fadeColor.r, fadeColor.g, fadeColor.b, alpha));
         texture.Apply();
+        CameraFadeOutConditions(true, false);
     }
 
     public void CameraFadeOutConditions(bool startFadingOut, bool timeLoadNextScene = false)
@@ -50,10 +53,20 @@ public class CameraFadeOutScript : MonoBehaviour
                 alpha = 0f;
                 alphaTimer = 1f;
                 direction = -1;
+                startFadedOut = false;
             }
-
+        }
+        if (timeLoadNextScene)
+        {
+            Invoke("LoadTheNextScene", 2f);
         }
     }
+    private void LoadTheNextScene()
+    {
+        SceneManager.LoadScene(sceneNameToLoad);
+    }
+
+
     public void OnGUI()
     {
         if (alpha > 0.0f)

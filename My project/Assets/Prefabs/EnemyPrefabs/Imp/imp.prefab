@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &397975224
 Transform:
   m_ObjectHideFlags: 0
@@ -5197,7 +5197,7 @@ MonoBehaviour:
   maxHealth: 40
   health: 0
   _slider: {fileID: 0}
-  bossHealth: {fileID: 0}
+  bossHealthUI: {fileID: 0}
   _heartAnimator: {fileID: 0}
   _particleSystem: {fileID: 2262237967677821999}
 --- !u!114 &851530726
@@ -5225,4 +5225,4 @@ MonoBehaviour:
   - {x: 0.0406, y: -0.049277782, z: 0}
   m_ShapePathHash: -1670917963
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1240
+  m_InstanceId: -314188

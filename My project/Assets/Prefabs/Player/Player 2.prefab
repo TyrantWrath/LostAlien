@@ -20268,7 +20268,7 @@ MonoBehaviour:
   maxHealth: 100
   health: 0
   _slider: {fileID: 0}
-  bossHealth: {fileID: 0}
+  bossHealthUI: {fileID: 0}
   _heartAnimator: {fileID: 0}
   _particleSystem: {fileID: 3071437610648909869}
 --- !u!114 &1727021647
@@ -20316,13 +20316,13 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000b92256cec38ac8b1654619c92905236f21d9d4a1
   m_ShapePath:
-  - {x: -0.032, y: -0.073, z: 0}
-  - {x: -0.032, y: 0.087, z: 0}
-  - {x: 0.048, y: 0.087, z: 0}
-  - {x: 0.048, y: -0.073, z: 0}
-  m_ShapePathHash: 2134551591
+  - {x: -0.020386696, y: -0.066851616, z: 0}
+  - {x: -0.018337011, y: 0.0767529, z: 0}
+  - {x: 0.02204132, y: 0.07675314, z: 0}
+  - {x: 0.019991875, y: -0.066168785, z: 0}
+  m_ShapePathHash: 66622741
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1658
+  m_InstanceId: -1620
 --- !u!1 &6495408748575372397
 GameObject:
   m_ObjectHideFlags: 0
@@ -20369,12 +20369,12 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.285
-  m_Color: {r: 1, g: 0.6126613, b: 0.20392156, a: 1}
-  m_Intensity: 0.52
-  m_LightVolumeIntensity: 1
+  m_FalloffIntensity: 0.587
+  m_Color: {r: 1, g: 0.8412724, b: 0.6745283, a: 1}
+  m_Intensity: 0.95
+  m_LightVolumeIntensity: 0
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000b92256ce1b4fa4fb
+  m_ApplyToSortingLayers: 00000000b92256ce1b4fa4fbc38ac8b1654619c99536f83a2905236f21d9d4a1
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -20382,9 +20382,9 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
-  m_ShadowIntensity: 0.75
-  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowIntensityEnabled: 1
+  m_ShadowIntensity: 0.8
+  m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 0.75
   m_Vertices:
   - position: {x: 0.9985302, y: 0.9985302, z: 0}
@@ -20421,7 +20421,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.21
-  m_PointLightOuterRadius: 0.69
+  m_PointLightOuterRadius: 0.87
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -21997,8 +21997,8 @@ MonoBehaviour:
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
   m_ShadowIntensityEnabled: 1
-  m_ShadowIntensity: 0.4
-  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowIntensity: 0.8
+  m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 0.75
   m_Vertices:
   - position: {x: 0.9985302, y: 0.9985302, z: 0}
@@ -22706,6 +22706,30 @@ PrefabInstance:
     - target: {fileID: 4513363702652089512, guid: 993c9059e88e5cf49844029e445fcabe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331474581117670011, guid: 993c9059e88e5cf49844029e445fcabe, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.31764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331474581117670011, guid: 993c9059e88e5cf49844029e445fcabe, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331474581117670011, guid: 993c9059e88e5cf49844029e445fcabe, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.9960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331474581117670011, guid: 993c9059e88e5cf49844029e445fcabe, type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0.5372549
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331474581117670011, guid: 993c9059e88e5cf49844029e445fcabe, type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0.9058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331474581117670011, guid: 993c9059e88e5cf49844029e445fcabe, type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 0.9960785
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 993c9059e88e5cf49844029e445fcabe, type: 3}

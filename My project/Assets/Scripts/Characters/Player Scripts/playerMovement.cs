@@ -21,6 +21,7 @@ public class playerMovement : CharacterMovement
 
     private CameraFadeOutScript _cameraFadeOutScript;
     private AudioManager _audioManager;
+
     protected override void Awake()
     {
         base.Awake();

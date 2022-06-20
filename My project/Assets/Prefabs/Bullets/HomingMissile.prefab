@@ -129,7 +129,6 @@ MonoBehaviour:
   enemyBulletShakeIntensity: 1
   enemyBulletShakeDuration: 0.3
   deactivateTimer: 5
-  _particleSystem: {fileID: 0}
 --- !u!58 &6589042251787636950
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -185,7 +184,7 @@ MonoBehaviour:
   m_Intensity: 0.83
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000b92256ce1b4fa4fb654619c99536f83a2905236f21d9d4a1
+  m_ApplyToSortingLayers: 00000000b92256ce1b4fa4fb654619c99536f83a2905236f21d9d4a1c38ac8b1
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0

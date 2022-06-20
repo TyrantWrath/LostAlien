@@ -1,0 +1,51 @@
+Date : 2022-06-17 14:37:40
+Directory : g:\GitHub\LostAlien\My project
+Total : 13 files,  -462 codes, 0 comments, -4 blanks, all -466 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| C#       |          8 |         76 |          0 |         16 |         92 |
+| XML      |          1 |          1 |          0 |          0 |          1 |
+| Log      |          4 |       -539 |          0 |        -20 |       -559 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                          | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                             |         13 |       -462 |          0 |         -4 |       -466 |
+| Assets                                                                                                        |          8 |         76 |          0 |         16 |         92 |
+| Assets\Scripts                                                                                                |          8 |         76 |          0 |         16 |         92 |
+| Assets\Scripts\Bullet scripts                                                                                 |          2 |         -3 |          0 |          3 |          0 |
+| Assets\Scripts\CameraScripts                                                                                  |          1 |         12 |          0 |          1 |         13 |
+| Assets\Scripts\Characters                                                                                     |          3 |         48 |          0 |         10 |         58 |
+| Assets\Scripts\Characters\Boss Man                                                                            |          1 |         10 |          0 |          0 |         10 |
+| Assets\Scripts\Characters\Enemy Scripts                                                                       |          1 |         38 |          0 |          9 |         47 |
+| Assets\Scripts\Characters\Enemy Scripts\EnemyShooter                                                          |          1 |         38 |          0 |          9 |         47 |
+| Assets\Scripts\Characters\Player Scripts                                                                      |          1 |          0 |          0 |          1 |          1 |
+| Assets\Scripts\Intractables                                                                                   |          1 |          0 |          0 |         -1 |         -1 |
+| Assets\Scripts\Intractables\Chest                                                                             |          1 |          0 |          0 |         -1 |         -1 |
+| Logs                                                                                                          |          4 |       -539 |          0 |        -20 |       -559 |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                      | language | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| g:\GitHub\LostAlien\My project\Assembly-CSharp.csproj                                                         | XML      |          1 |          0 |          0 |          1 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Bullet scripts\EnemyBullet.cs                                   | C#       |          1 |          0 |          4 |          5 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Bullet scripts\HomingMissile.cs                                 | C#       |         -4 |          0 |         -1 |         -5 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\CameraScripts\CameraFadeOutScript.cs                            | C#       |         12 |          0 |          1 |         13 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Boss Man\BossMovement.cs                             | C#       |         10 |          0 |          0 |         10 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Enemy Scripts\EnemyShooter\EnemyShooterController.cs | C#       |         38 |          0 |          9 |         47 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Characters\Player Scripts\playerMovement.cs                     | C#       |          0 |          0 |          1 |          1 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\Intractables\Chest\ChestScript.cs                               | C#       |          0 |          0 |         -1 |         -1 |
+| g:\GitHub\LostAlien\My project\Assets\Scripts\SceneManagerScript.cs                                           | C#       |         19 |          0 |          3 |         22 |
+| g:\GitHub\LostAlien\My project\Logs\AssetImportWorker0-prev.log                                               | Log      |       -595 |          0 |        -20 |       -615 |
+| g:\GitHub\LostAlien\My project\Logs\AssetImportWorker0.log                                                    | Log      |         60 |          0 |          4 |         64 |
+| g:\GitHub\LostAlien\My project\Logs\shadercompiler-UnityShaderCompiler.exe1.log                               | Log      |         -2 |          0 |         -2 |         -4 |
+| g:\GitHub\LostAlien\My project\Logs\shadercompiler-UnityShaderCompiler.exe2.log                               | Log      |         -2 |          0 |         -2 |         -4 |
+| Total                                                                                                         |          |       -462 |          0 |         -4 |       -466 |
++---------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

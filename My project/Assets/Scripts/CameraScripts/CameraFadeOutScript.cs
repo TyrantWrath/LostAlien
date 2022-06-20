@@ -38,7 +38,7 @@ public class CameraFadeOutScript : MonoBehaviour
         CameraFadeOutConditions(true, false);
     }
 
-    public void CameraFadeOutConditions(bool startFadingOut, bool timeLoadNextScene = false)
+    public void CameraFadeOutConditions(bool startFadingOut, bool timeLoadNextScene = false, bool isPlayerDeath = false)
     {
         if (direction == 0 && startFadingOut)
         {
@@ -58,12 +58,25 @@ public class CameraFadeOutScript : MonoBehaviour
         }
         if (timeLoadNextScene)
         {
-            Invoke("LoadTheNextScene", 2f);
+            if (isPlayerDeath)
+            {
+                Invoke("ReloadCurrentScene", 2.4f);
+            }
+
+            else if (!isPlayerDeath)
+            {
+                Invoke("LoadTheNextScene", 2.4f);
+            }
+
         }
     }
     private void LoadTheNextScene()
     {
         SceneManager.LoadScene(sceneNameToLoad);
+    }
+    private void ReloadCurrentScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 

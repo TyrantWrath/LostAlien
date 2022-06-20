@@ -57,7 +57,7 @@ public class CharacterHealth : MonoBehaviour
         }
         if (bossHealthUI != null)
         {
-            bossHealthUI.fillAmount = Mathf.Clamp(health, 0, health) / 199;
+            bossHealthUI.fillAmount = Mathf.Clamp(health, 0, health) / (maxHealth - 1);
         }
         if (health <= 0f)
         {

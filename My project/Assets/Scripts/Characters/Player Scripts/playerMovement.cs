@@ -46,7 +46,7 @@ public class playerMovement : CharacterMovement
     {
         if (!playerHealth.IsAlive())
         {
-            _cameraFadeOutScript.CameraFadeOutConditions(true);
+            _cameraFadeOutScript.CameraFadeOutConditions(true, true, true);
             _audioManager.PlayeDeathFadeOutAudio();
             return;
             //PlayerDeathSystem();
